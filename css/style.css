@@ -107,7 +107,7 @@
     }
 
 
-    @media (max-width: 640px){
+    @media (max-width: 746px){
       :root{ --toolbar-h: 92px; }
       .toolbar{ flex-wrap: wrap; justify-content: center; }
       .viewport{ padding: 1.5rem .75rem 5rem; }
