@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="module" src="./js/index.js" defer></script>
+  <link rel="icon" type="image/png" href="./images/webp/luma.webp">
+  <title>Auto-Scroll de Texto</title>  
+</head>
+<body>
+  <header class="toolbar" id="toolbar">
+    <div class="group">
+      <label class="btn" for="fileInput">📄 Cargar .txt</label>
+      <input id="fileInput" type="file" accept=".txt" hidden />
+      <button id="pasteBtn" class="btn" title="Pegar desde portapapeles">📋 Pegar texto</button>
+    </div>
+    <div class="group">
+      <button id="fontUpBtn" class="btn" title="Aumentar tamaño Fuente">🔠 Aumentar texto</button>
+      <button id="fontDownBtn" class="btn" title="Disminuir tamaño Fuente">🔡 Disminuir texto</button>
+    </div>
+    <div class="group">
+      <button id="startBtn" class="btn" aria-pressed="false" title="Iniciar (Barra espaciadora)">▶️ Iniciar</button>
+      <button id="pauseBtn" class="btn" title="Pausar (Barra espaciadora)">⏸️ Pausar</button>
+      <button id="toTopBtn" class="btn" title="Volver arriba (Inicio)">⤴️ Arriba</button>
+    </div>
+    <div class="group">
+      <span class="label">Velocidad</span>
+      <input id="speedRange" class="range" type="range" min="10" max="800" step="5" value="120" />
+      <span class="pill"><span id="speedValue">120</span> px/s</span>
+    </div>
+    <div class="group">
+      <label class="label"><input id="pauseOnInteract" type="checkbox" checked /> Pausar al interactuar</label>
+    </div>
+  </header>
+
+  <main class="viewport" id="viewport" tabindex="0" aria-label="Zona de lectura">
+    <article id="reader" class="reader" contenteditable="true" spellcheck="false">
+      📌 <strong>Texto de ejemplo</strong>
+
+      Puedes escribir o pegar aquí la letra. También puedes:
+
+      • Hacer clic en <em>📄 Cargar .txt</em> para abrir un archivo.
+      • Pulsar <span class="kbd">Ctrl</span> + <span class="kbd">V</span> para pegar.
+      • Usar <span class="kbd">Espacio</span> para iniciar/pausar.
+      • Ajustar la velocidad con el control superior.
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat, velit non tempus ultrices, nisl est ullamcorper leo, id laoreet leo magna et velit. Morbi volutpat, tellus in vehicula pulvinar, lorem orci dapibus massa, a dictum sapien ligula at odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac lacus nec mauris imperdiet bibendum. Integer in est ac dolor commodo rutrum. Integer ultricies leo a sem viverra mattis. Curabitur ac luctus felis. Vestibulum consequat magna a enim mollis, quis sollicitudin tortor elementum.
+
+      (Reemplaza este texto por tu letra.)
+    </article>
+  </main>
+
+  <footer class="footer-note muted">Atajos: 
+    <span class="kbd">Espacio</span> iniciar/pausar · 
+    <span class="kbd">↑</span>/<span class="kbd">↓</span> velocidad · 
+    <span class="kbd">Inicio</span> arriba · 
+    <span class="kbd">Fin</span> abajo · 
+    <a href=""><img title="Creado por Luma2001" height="30" src="./images/webp/luma.webp"></a>
+  </footer>
+
+</body>
+</html>
