@@ -111,4 +111,5 @@
       :root{ --toolbar-h: 92px; }
       .toolbar{ flex-wrap: wrap; justify-content: center; }
       .viewport{ padding: 1.5rem .75rem 5rem; }
+      .footer-note{ display: none;}
     }
